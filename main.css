@@ -1,0 +1,52 @@
+/* 기본 설정 */
+:root {
+	--maincolor: #00495C;	/* 메인색 */
+	--bgcolor: #ACD1E4;	/* 배경색 */
+}
+
+html.darkmode:root {
+	--maincolor: #10B1C9;	/* 메인색 */
+	--bgcolor: #ACD1E4;	/* 배경색 */
+}
+
+/* 너비 1100px 이하로 바뀌면 적용되는 설정 */
+@media (max-width: 1100px) {
+	:root {
+		--maincolor: #00495C;	/* 메인색 */
+		--bgcolor: #ACD1E4;	/* 배경색 */
+	}
+	html.darkmode:root {
+		--maincolor: #10B1C9;	/* 메인색 */
+		--bgcolor: #ACD1E4;	/* 배경색 */
+	}
+	
+	/* 모바일로 전환 사이즈 조정 */
+	a#switch-platform-link { font-size: 36px; }
+}
+
+/* 모든 항목 focus시 아웃라인 제거 */
+*:focus { outline: none !important; }
+
+/* 링크 기본 */
+a {
+	color: var(--maincolor) !important;
+	transition: all 0.2s ease 0s;
+}
+a:hover,
+a:focus { color: var(--maincolor) !important; }
+
+/* fontawesome 사용 */
+a.nav-link,
+span.category,
+select.form-control {
+	font-family: FontAwesome, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+/* 알림 */
+.alert {
+	margin-bottom: 10px !important;
+	padding: 10px 35px 10px 15px !important;
+}
+
+html { background: var(--bgcolor); }
+body { background: transparent !important; }
